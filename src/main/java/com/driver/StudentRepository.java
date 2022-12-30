@@ -88,8 +88,8 @@ public class StudentRepository {
     public void deleteTeacherByNameFromDb(String teacher){
         for(int i=0;i<pairs.size();i++){
             if(pairs.get(i).Tea.equals(teacher)){
-                //if(studentDb.containsKey(pairs.get(i).Stu))
-                    //studentDb.remove(pairs.get(i).Stu);
+                if(studentDb.containsKey(pairs.get(i).Stu))
+                    studentDb.remove(pairs.get(i).Stu);
                 if(teacherDb.containsKey(teacher))
                     teacherDb.remove(pairs.get(i).Tea);
                 pairs.remove(pairs.get(i));
@@ -102,6 +102,8 @@ public class StudentRepository {
 
             if(teacherDb.containsKey(pairs.get(i).Tea))
                 teacherDb.remove(pairs.get(i).Tea);
+            if(studentDb.containsKey(pairs.get(i).Stu))
+                studentDb.remove(pairs.get(i).Stu);
         }
         pairs.clear();
     }
