@@ -6,7 +6,7 @@ public class Student {
     private int age;
     private double averageScore;
 
-    public Student(){
+    public Student() {
 
     }
 
@@ -39,6 +39,4 @@ public class Student {
     public void setAverageScore(double averageScore) {
         this.averageScore = averageScore;
     }
-
-
 }
